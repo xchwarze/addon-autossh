@@ -69,6 +69,10 @@ if [ -n "$LOCAL_FORWARDING" ]; then
     done <<< "$LOCAL_FORWARDING"
 fi
 
+# Enable debug mode on autossh
+if bashio::debug; then
+    command_args="${command_args} -v"
+fi
 
 command_args="${command_args} ${OTHER_SSH_OPTIONS}"
 bashio::log.info "Autossh start!"

@@ -23,7 +23,8 @@
     "gatetime": 0,
     "retry_interval": 3,
     "ssh_key_name": "addon_autossh_key",
-    "use_share_folder": true
+    "use_share_folder": true,
+    "log_level": "info"
   },
   "schema": {
     "hostname": "str",
@@ -32,12 +33,13 @@
     "remote_forwarding": ["str"],
     "local_forwarding": ["str"],
     "other_ssh_options": "str",
-    "monitor_port": "int",
+    "monitor_port": "int(1,65535)",
     "server_alive_interval": "int",
     "server_alive_count_max": "int",
     "gatetime": "int",
     "retry_interval": "int",
     "ssh_key_name": "str",
-    "use_share_folder": "bool"
+    "use_share_folder": "bool",
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)"
   }
 }
