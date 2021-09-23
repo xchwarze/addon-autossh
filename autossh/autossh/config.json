@@ -33,7 +33,7 @@
     "remote_forwarding": ["str"],
     "local_forwarding": ["str"],
     "other_ssh_options": "str",
-    "monitor_port": "int(1,65535)",
+    "monitor_port": "int(0,65535)",
     "server_alive_interval": "int",
     "server_alive_count_max": "int",
     "gatetime": "int",
