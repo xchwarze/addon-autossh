@@ -56,21 +56,23 @@ command_args="-M ${MONITOR_PORT} \
     -i ${SSH_KEY_PATH}/${SSH_KEY_NAME}"
 
 if [ -n "$REMOTE_FORWARDING" ]; then
-    bashio::log.info "Processing remote_forwarding argument '$REMOTE_FORWARDING'"
+    bashio::log.debug "Processing remote_forwarding argument '$REMOTE_FORWARDING'"
     while read -r line; do
         command_args="${command_args} -R $line"
     done <<< "$REMOTE_FORWARDING"
 fi
 
 if [ -n "$LOCAL_FORWARDING" ]; then
-    bashio::log.info "Processing local_forwarding argument '$LOCAL_FORWARDING'"
+    bashio::log.debug "Processing local_forwarding argument '$LOCAL_FORWARDING'"
     while read -r line; do
         command_args="${command_args} -L $line"
     done <<< "$LOCAL_FORWARDING"
 fi
 
+
 command_args="${command_args} ${OTHER_SSH_OPTIONS}"
-bashio::log.info "Executing autossh with params: ${command_args}"
+bashio::log.info "Autossh start!"
+bashio::log.debug "Executing autossh with params: ${command_args}"
 
 # Start autossh
 until /usr/bin/autossh ${command_args} 2>&1 | ts '[%Y-%m-%d %H:%M:%S]'

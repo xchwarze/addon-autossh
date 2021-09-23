@@ -18,7 +18,7 @@
     "local_forwarding": [""],
     "other_ssh_options": "-v",
     "monitor_port": 0,
-    "server_alive_interval": 20,
+    "server_alive_interval": 30,
     "server_alive_count_max": 3,
     "gatetime": 0,
     "retry_interval": 3,
