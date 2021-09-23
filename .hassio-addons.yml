@@ -1,0 +1,7 @@
+---
+channel: stable
+addons:
+  autossh:
+    repository: hassio-addons/autossh/autossh
+    target: autossh
+    image: autossh
