@@ -15,4 +15,4 @@ listen on all interfaces, `0.0.0.0`. `GatewayPorts clientspecified`
 is preferable.
 
 ### Licence
-MIT (c) Odin Ugedal
+MIT (c) DSR!

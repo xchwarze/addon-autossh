@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: Example
+# Home Assistant Add-on: Autossh
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -17,26 +17,21 @@
 [![Discord][discord-shield]][discord]
 [![Community Forum][forum-shield]][forum]
 
-Example add-on by Community Home Assistant add-ons.
+Autossh add-on by DSR! for Home Assistant add-ons.
 
 ## About
 
-This is an example add-on for Home Assistant. When started, it displays a
-random quote every 5 seconds.
+Use SSH to make ports of your local Home Assistant setup available at or through a remote system.
+This forms yet another way to make the Lovelace UI and other services accessible from another network or the public internet.
+If you do not have the authority to open ports into your local network, and a VPN solutions seems overkill, this add-on might just be the solution for you.
 
-It shows off several features and structures like:
+The solution is only useful to those with access to a publicly available SSH server and some administrative privileges on that system.
 
-- Full blown GitHub repository.
-- General Dockerfile structure and setup.
-- The use of the `config.json` and `build.json` files.
-- General structure on how to use S6 overlay with services.
-- Basic usage of Bashio.
-- Continuous integration and deployment using GitHub Actions.
-- Deployment to the GitHub Container registry.
-- Small use of the Bash function library in our base images.
-- The use of Docker label schema.
+Autossh is a well known tool to establish an SSH connection and keep it connected over hours and months.
+SSH is known for its high security and the ability to set up port forwardings in both directions through the SSH connection.
+In combination, this add-on offers tunneled port forwarding functionality.
 
-[:books: Read the full add-on documentation][docs]
+The solution works reliably and without disruptions.
 
 ## Support
 
@@ -65,17 +60,10 @@ Thank you for being involved! :heart_eyes:
 
 ## Authors & contributors
 
-The original setup of this repository is by [Franck Nijhof][frenck].
+The original setup of this repository is by DSR!
 
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
-
-## We have got some Home Assistant add-ons for you
-
-Want some more functionality to your Home Assistant instance?
-
-We have created multiple add-ons for Home Assistant. For a full list, check out
-our [GitHub Repository][repository].
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
@@ -90,17 +78,12 @@ our [GitHub Repository][repository].
 [docs]: https://github.com/hassio-addons/addon-example/blob/main/example/DOCS.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/t/repository-community-hass-io-add-ons/24705?u=frenck
-[frenck]: https://github.com/frenck
 [github-actions-shield]: https://github.com/hassio-addons/addon-example/workflows/CI/badge.svg
 [github-actions]: https://github.com/hassio-addons/addon-example/actions
-[github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
-[github-sponsors]: https://github.com/sponsors/frenck
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-example/issues
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-example.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2021.svg
-[patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
-[patreon]: https://www.patreon.com/frenck
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-example.svg
