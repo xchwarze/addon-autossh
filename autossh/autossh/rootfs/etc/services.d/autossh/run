@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: Autossh
+# Runs Autossh script
+# ==============================================================================
+
+
+bashio::log.info "Starting Autossh..."
+
+exec /usr/bin/autossh.sh
