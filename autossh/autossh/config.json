@@ -1,6 +1,6 @@
 {
   "name": "Autossh",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "slug": "autossh",
   "description": "Automatically connect to a ssh server for forwarding ports",
   "url": "https://github.com/xchwarze/addon-autossh",
