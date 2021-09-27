@@ -5,7 +5,7 @@
 # ==============================================================================
 
 
-bashio::log.info "Starting Autossh..."
+bashio::log.info "Starting Autossh service..."
 
 chmod +x /usr/bin/autossh.sh
 exec /usr/bin/autossh.sh
