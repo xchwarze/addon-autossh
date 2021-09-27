@@ -7,4 +7,5 @@
 
 bashio::log.info "Starting Autossh..."
 
+chmod +x /usr/bin/autossh.sh
 exec /usr/bin/autossh.sh
