@@ -1,31 +1,24 @@
-# Home Assistant Community Add-on: Example
+# Home Assistant Community Add-on: Autossh
 
 [![Release][release-shield]][release] ![Project Stage][project-stage-shield] ![Project Maintenance][maintenance-shield]
 
 [![Discord][discord-shield]][discord] [![Community Forum][forum-shield]][forum]
 
-[![Sponsor Frenck via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
-
-[![Support Frenck on Patreon][patreon-shield]][patreon]
-
-Example add-on by Community Home Assistant add-ons.
+Autossh add-on by DSR! for Home Assistant add-ons.
 
 ## About
 
-This is an example add-on for Home Assistant. When started, it displays a
-random quote every 5 seconds.
+Use SSH to make ports of your local Home Assistant setup available at or through a remote system.
+This forms yet another way to make the Lovelace UI and other services accessible from another network or the public internet.
+If you do not have the authority to open ports into your local network, and a VPN solutions seems overkill, this add-on might just be the solution for you.
 
-It shows off several features and structures like:
+The solution is only useful to those with access to a publicly available SSH server and some administrative privileges on that system.
 
-- Full blown GitHub repository.
-- General Dockerfile structure and setup.
-- The use of the `config.json` and `build.json` files.
-- General shell scripting structure (`run.sh`).
-- Quality assurance using CodeClimate.
-- Continuous integration and deployment using GitLab.
-- Usage of the Community Home Assistant Add-ons build environment.
-- Small use of the Bash function library in our base images.
-- The use of Docker label schema.
+Autossh is a well known tool to establish an SSH connection and keep it connected over hours and months.
+SSH is known for its high security and the ability to set up port forwardings in both directions through the SSH connection.
+In combination, this add-on offers tunneled port forwarding functionality.
+
+The solution works reliably and without disruptions.
 
 {% if channel == "edge" %}
 ## WARNING! THIS IS AN EDGE VERSION!
@@ -69,12 +62,8 @@ If you are more interested in stable releases of our add-ons:
 [discord-shield]: https://img.shields.io/discord/478094546522079232.svg
 [discord]: https://discord.me/hassioaddons
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io?u=frenck
-[github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
-[github-sponsors]: https://github.com/sponsors/frenck
+[forum]: https://community.home-assistant.io
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2021.svg
-[patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
-[patreon]: https://www.patreon.com/frenck
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
 [release-shield]: https://img.shields.io/badge/version-{{ version }}-blue.svg
 [release]: {{ repo }}/tree/{{ version }}

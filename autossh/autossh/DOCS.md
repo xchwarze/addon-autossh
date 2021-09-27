@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: Example
+# Home Assistant Community Add-on: Autossh
 
 Use SSH to make ports of your local Home Assistant setup available at or through a remote system.
 This forms yet another way to make the Lovelace UI and other services accessible from another network or the public internet.
@@ -162,8 +162,6 @@ You could also [open an issue here][issue] GitHub.
 
 ## Authors & contributors
 
-The original setup of this repository is by [Franck Nijhof][frenck].
-
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
 
@@ -191,12 +189,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[contributors]: https://github.com/hassio-addons/addon-example/graphs/contributors
+[contributors]: https://github.com/xchwarze/hassio-addons/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
-[forum]: https://community.home-assistant.io/t/repository-community-hass-io-add-ons/24705?u=frenck
-[frenck]: https://github.com/xchwarze
-[issue]: https://github.com/hassio-addons/addon-example/issues
+[forum]: https://community.home-assistant.io
+[issue]: https://github.com/xchwarze/hassio-addons/issues
 [reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/hassio-addons/addon-example/releases
+[releases]: https://github.com/xchwarze/hassio-addons/releases
 [semver]: http://semver.org/spec/v2.0.0.html
