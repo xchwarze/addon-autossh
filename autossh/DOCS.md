@@ -38,8 +38,8 @@ username: autossh
 remote_forwarding:
   - 127.0.0.1:8123:172.17.0.1:8123
 local_forwarding:
-  - ''
-other_ssh_options: '-v'
+  - ""
+other_ssh_options: "-v"
 monitor_port: 0
 server_alive_interval: 30
 server_alive_count_max: 3
@@ -84,7 +84,7 @@ This is optional and for testing purposes a verbose output enabled by `-v` can b
 
 Specifies the base monitoring port to use. Without the echo port, this port and the port immediately above it (port + 1) should be something nothing else is using. autossh will send test data on the base monitoring port, and receive it back on the port above. For example, if you specify "-M 20000", autossh will set up forwards so that it can send data on port 20000 and receive it back on 20001.
 
-Setting the monitor port to 0 turns the monitoring function off, and autossh will only restart ssh upon ssh's exit. For example, if you are using a recent version of OpenSSH, you may wish to explore using the ServerAliveInterval and ServerAliveCountMax options to have the SSH client exit if it finds itself no longer connected to the server. In many ways this may be a better solution than the monitoring port. 
+Setting the monitor port to 0 turns the monitoring function off, and autossh will only restart ssh upon ssh's exit. For example, if you are using a recent version of OpenSSH, you may wish to explore using the ServerAliveInterval and ServerAliveCountMax options to have the SSH client exit if it finds itself no longer connected to the server. In many ways this may be a better solution than the monitoring port.
 
 ### Option: `server_alive_interval`
 
@@ -100,7 +100,7 @@ If this threshold is reached while server alive messages are being sent, ssh wil
 
 Specifies how long ssh must be up before we consider it a successful connection. The default is 30 seconds.
 Note that if gatetime is set to 0, then not only is the gatetime behaviour turned off, but autossh also ignores the first run failure of ssh.
-This may be useful when running autossh at boot. 
+This may be useful when running autossh at boot.
 
 ### Option: `retry_interval`
 
@@ -108,7 +108,7 @@ This directive is used to define the number of secons to wait before scheduling 
 
 ### Option: `ssh_key_name`
 
-Descriptive name for your SSH key. 
+Descriptive name for your SSH key.
 
 ### Option: `use_share_folder`
 

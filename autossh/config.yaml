@@ -15,15 +15,15 @@ startup: application
 boot: auto
 host_network: true
 map:
-- share:rw
+  - share:rw
 options:
-  hostname: ''
+  hostname: ""
   ssh_port: 22
   username: autossh
   remote_forwarding:
     - 127.0.0.1:8123:172.17.0.1:8123
   local_forwarding:
-    - ''
+    - ""
   other_ssh_options: "-v"
   monitor_port: 0
   server_alive_interval: 30
