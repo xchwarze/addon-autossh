@@ -26,9 +26,9 @@ comparison to installing any other Home Assistant add-on.
 
 1. Search for the "Autossh" add-on in the Supervisor add-on store and install
    it.
-2. Configure add-on with the parameters of your server.
-3. Start add-on and check the logs for grab the generated public key.
-4. Add the key on your server to this path `~/.ssh/authorized_keys` and
+1. Configure add-on with the parameters of your server.
+1. Start add-on and check the logs for grab the generated public key.
+1. Add the key on your server to this path `~/.ssh/authorized_keys` and
    restart the add-on.
 
 ## Configuration
