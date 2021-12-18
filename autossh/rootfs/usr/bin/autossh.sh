@@ -92,7 +92,8 @@ fi
 autossh_params+=("${OTHER_SSH_OPTIONS}")
 
 bashio::log.info "Autossh start!"
-bashio::log.debug "Executing autossh with params: '${autossh_params[@]}'"
+bashio::log.debug "Executing autossh with params:"
+bashio::log.debug "${autossh_params[@]}"
 
 # Start autossh
 until /usr/bin/autossh "${autossh_params[@]}" 2>&1 | ts '[%Y-%m-%d %H:%M:%S]'
