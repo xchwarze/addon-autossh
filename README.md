@@ -20,20 +20,20 @@ Autossh add-on by DSR! for Home Assistant add-ons.
 
 ## About
 
-Use SSH to make ports of your local Home Assistant setup available at or 
+Use SSH to make ports of your local Home Assistant setup available at or
 through a remote system.
-This forms yet another way to make the Lovelace UI and other services 
+This forms yet another way to make the Lovelace UI and other services
 accessible from another network or the public internet.
-If you do not have the authority to open ports into your local network, 
-and a VPN solutions seems overkill, this add-on might just be the solution 
+If you do not have the authority to open ports into your local network,
+and a VPN solutions seems overkill, this add-on might just be the solution
 for you.
 
-The solution is only useful to those with access to a publicly available 
+The solution is only useful to those with access to a publicly available
 SSH server and some administrative privileges on that system.
 
-Autossh is a well known tool to establish an SSH connection and keep it 
+Autossh is a well known tool to establish an SSH connection and keep it
 connected over hours and months.
-SSH is known for its high security and the ability to set up port forwardings 
+SSH is known for its high security and the ability to set up port forwardings
 in both directions through the SSH connection.
 In combination, this add-on offers tunneled port forwarding functionality.
 
@@ -45,7 +45,7 @@ Got questions?
 
 You have several options to get them answered:
 
-- The [Home Assistant Community Add-ons Discord chat server][discord] for 
+- The [Home Assistant Community Add-ons Discord chat server][discord] for
   add-on support and feature requests.
 - The [Home Assistant Discord chat server][discord-ha] for general Home
   Assistant discussions and questions.
