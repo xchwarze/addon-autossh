@@ -55,7 +55,7 @@ cat "${SSH_KEY_PATH}/${SSH_KEY_NAME}.pub"
 bashio::log.info "-----------------------------------------------------------"
 
 # add host key to global ssh config
-ssh-keyscan -p $SSH_PORT $HOSTNAME > /etc/ssh/ssh_known_hosts
+ssh-keyscan -p "$SSH_PORT" "$HOSTNAME" > "/etc/ssh/ssh_known_hosts"
 
 # autossh params
 # https://www.harding.motd.ca/autossh/
@@ -99,5 +99,5 @@ bashio::log.debug "${autossh_params[@]}"
 until /usr/bin/autossh "${autossh_params[@]}" 2>&1 | ts '[%Y-%m-%d %H:%M:%S]'
 do
     bashio::log.info "Failed, retrying in ${RETRY_INTERVAL}s"
-    sleep ${RETRY_INTERVAL}
+    sleep "${RETRY_INTERVAL}"
 done
