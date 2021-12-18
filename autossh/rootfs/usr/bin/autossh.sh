@@ -60,26 +60,27 @@ ssh-keyscan -p $SSH_PORT $HOSTNAME > /etc/ssh/ssh_known_hosts
 # autossh params
 # https://www.harding.motd.ca/autossh/
 # https://linux.die.net/man/1/autossh
-autossh_params+=(-M ${MONITOR_PORT})
-autossh_params+=(-N -q)
+autossh_params+=(-M "${MONITOR_PORT}")
+autossh_params+=(-N)
+autossh_params+=(-q)
 autossh_params+=(-o ExitOnForwardFailure=yes)
-autossh_params+=(-o ServerAliveInterval=${SERVER_ALIVE_INTERVAL})
-autossh_params+=(-o ServerAliveCountMax=${SERVER_ALIVE_COUNT_MAX})
-autossh_params+=(${USERNAME}@${HOSTNAME})
-autossh_params+=(-p ${SSH_PORT})
-autossh_params+=(-i ${SSH_KEY_PATH}/${SSH_KEY_NAME})
+autossh_params+=(-o ServerAliveInterval="${SERVER_ALIVE_INTERVAL}")
+autossh_params+=(-o ServerAliveCountMax="${SERVER_ALIVE_COUNT_MAX}")
+autossh_params+=("${USERNAME}"@"${HOSTNAME}")
+autossh_params+=(-p "${SSH_PORT}")
+autossh_params+=(-i "${SSH_KEY_PATH}"/"${SSH_KEY_NAME}")
 
 if [ -n "$REMOTE_FORWARDING" ]; then
     bashio::log.debug "Processing remote_forwarding argument '$REMOTE_FORWARDING'"
     while read -r line; do
-        autossh_params+=(-R $line)
+        autossh_params+=(-R "$line")
     done <<< "$REMOTE_FORWARDING"
 fi
 
 if [ -n "$LOCAL_FORWARDING" ]; then
     bashio::log.debug "Processing local_forwarding argument '$LOCAL_FORWARDING'"
     while read -r line; do
-        autossh_params+=(-L $line)
+        autossh_params+=(-L "$line")
     done <<< "$LOCAL_FORWARDING"
 fi
 
@@ -91,10 +92,10 @@ fi
 autossh_params+=(${OTHER_SSH_OPTIONS})
 
 bashio::log.info "Autossh start!"
-bashio::log.debug "Executing autossh with params: ${autossh_params}"
+bashio::log.debug "Executing autossh with params: ${autossh_params[@]}"
 
 # Start autossh
-until /usr/bin/autossh ${autossh_params} 2>&1 | ts '[%Y-%m-%d %H:%M:%S]'
+until /usr/bin/autossh "${autossh_params[@]}" 2>&1 | ts '[%Y-%m-%d %H:%M:%S]'
 do
     bashio::log.info "Failed, retrying in ${RETRY_INTERVAL}s"
     sleep ${RETRY_INTERVAL}
