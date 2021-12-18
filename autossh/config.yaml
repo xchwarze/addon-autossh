@@ -11,8 +11,6 @@ arch:
   - aarch64
   - i386
 advanced: true
-startup: application
-boot: auto
 host_network: true
 map:
   - share:rw
