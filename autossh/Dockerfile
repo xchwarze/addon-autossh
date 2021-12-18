@@ -10,10 +10,10 @@ COPY rootfs /
 
 # Setup base
 RUN apk add --no-cache \
-    autossh \
-    moreutils \
-    nano \
-    curl
+    autossh-1.4g-r1 \
+    moreutils-0.65-r0 \
+    nano-5.7-r2 \
+    curl-7.79.1-r0
 
 # Build arguments
 ARG BUILD_ARCH
