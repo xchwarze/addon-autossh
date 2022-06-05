@@ -85,7 +85,7 @@ check [the contributor's page][contributors].
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/xchwarze/addon-autossh/issues
 [license-shield]: https://img.shields.io/github/license/xchwarze/addon-autossh.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2021.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/xchwarze/addon-autossh.svg
