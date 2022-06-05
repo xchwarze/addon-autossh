@@ -44,7 +44,7 @@ fi
 if [ ! -f "${SSH_KEY_PATH}/${SSH_KEY_NAME}" ]; then
     bashio::log.info "Generating new private key"
     mkdir -p "${SSH_KEY_PATH}"
-    ssh-keygen -b 4096 -t rsa -N "" -f "${SSH_KEY_PATH}/${SSH_KEY_NAME}"  
+    ssh-keygen -b 4096 -t ED25519 -N "" -f "${SSH_KEY_PATH}/${SSH_KEY_NAME}"  
 fi
 
 bashio::log.info "Using existing keys from: '${SSH_KEY_PATH}'"
